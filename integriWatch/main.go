@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"integriWatch/system"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	if err := system.Init(); err != nil {
+		panic(err)
+	}
 }
